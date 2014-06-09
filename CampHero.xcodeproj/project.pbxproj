@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D3AB068194628650066212F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB067194628650066212F /* Foundation.framework */; };
+		8D3AB06A194628650066212F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB069194628650066212F /* CoreGraphics.framework */; };
+		8D3AB06C194628650066212F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB06B194628650066212F /* UIKit.framework */; };
+		8D3AB072194628650066212F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB070194628650066212F /* InfoPlist.strings */; };
+		8D3AB074194628650066212F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB073194628650066212F /* main.m */; };
+		8D3AB078194628650066212F /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB077194628650066212F /* CHAppDelegate.m */; };
+		8D3AB07A194628650066212F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB079194628650066212F /* Images.xcassets */; };
+		8D3AB081194628660066212F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB080194628660066212F /* XCTest.framework */; };
+		8D3AB082194628660066212F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB067194628650066212F /* Foundation.framework */; };
+		8D3AB083194628660066212F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB06B194628650066212F /* UIKit.framework */; };
+		8D3AB08B194628660066212F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB089194628660066212F /* InfoPlist.strings */; };
+		8D3AB08D194628660066212F /* CampHeroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB08C194628660066212F /* CampHeroTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D3AB084194628660066212F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D3AB05C194628650066212F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D3AB063194628650066212F;
+			remoteInfo = CampHero;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D3AB064194628650066212F /* CampHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3AB067194628650066212F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8D3AB069194628650066212F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8D3AB06B194628650066212F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8D3AB06F194628650066212F /* CampHero-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CampHero-Info.plist"; sourceTree = "<group>"; };
+		8D3AB071194628650066212F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8D3AB073194628650066212F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D3AB075194628650066212F /* CampHero-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CampHero-Prefix.pch"; sourceTree = "<group>"; };
+		8D3AB076194628650066212F /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
+		8D3AB077194628650066212F /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		8D3AB079194628650066212F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8D3AB07F194628660066212F /* CampHeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampHeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3AB080194628660066212F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8D3AB088194628660066212F /* CampHeroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CampHeroTests-Info.plist"; sourceTree = "<group>"; };
+		8D3AB08A194628660066212F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8D3AB08C194628660066212F /* CampHeroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampHeroTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D3AB061194628650066212F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3AB06A194628650066212F /* CoreGraphics.framework in Frameworks */,
+				8D3AB06C194628650066212F /* UIKit.framework in Frameworks */,
+				8D3AB068194628650066212F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3AB07C194628660066212F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3AB081194628660066212F /* XCTest.framework in Frameworks */,
+				8D3AB083194628660066212F /* UIKit.framework in Frameworks */,
+				8D3AB082194628660066212F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D3AB05B194628640066212F = {
+			isa = PBXGroup;
+			children = (
+				8D3AB06D194628650066212F /* CampHero */,
+				8D3AB086194628660066212F /* CampHeroTests */,
+				8D3AB066194628650066212F /* Frameworks */,
+				8D3AB065194628650066212F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D3AB065194628650066212F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB064194628650066212F /* CampHero.app */,
+				8D3AB07F194628660066212F /* CampHeroTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D3AB066194628650066212F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB067194628650066212F /* Foundation.framework */,
+				8D3AB069194628650066212F /* CoreGraphics.framework */,
+				8D3AB06B194628650066212F /* UIKit.framework */,
+				8D3AB080194628660066212F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D3AB06D194628650066212F /* CampHero */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB076194628650066212F /* CHAppDelegate.h */,
+				8D3AB077194628650066212F /* CHAppDelegate.m */,
+				8D3AB079194628650066212F /* Images.xcassets */,
+				8D3AB06E194628650066212F /* Supporting Files */,
+			);
+			path = CampHero;
+			sourceTree = "<group>";
+		};
+		8D3AB06E194628650066212F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB06F194628650066212F /* CampHero-Info.plist */,
+				8D3AB070194628650066212F /* InfoPlist.strings */,
+				8D3AB073194628650066212F /* main.m */,
+				8D3AB075194628650066212F /* CampHero-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D3AB086194628660066212F /* CampHeroTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB08C194628660066212F /* CampHeroTests.m */,
+				8D3AB087194628660066212F /* Supporting Files */,
+			);
+			path = CampHeroTests;
+			sourceTree = "<group>";
+		};
+		8D3AB087194628660066212F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB088194628660066212F /* CampHeroTests-Info.plist */,
+				8D3AB089194628660066212F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D3AB063194628650066212F /* CampHero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D3AB090194628660066212F /* Build configuration list for PBXNativeTarget "CampHero" */;
+			buildPhases = (
+				8D3AB060194628650066212F /* Sources */,
+				8D3AB061194628650066212F /* Frameworks */,
+				8D3AB062194628650066212F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CampHero;
+			productName = CampHero;
+			productReference = 8D3AB064194628650066212F /* CampHero.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D3AB07E194628660066212F /* CampHeroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D3AB093194628660066212F /* Build configuration list for PBXNativeTarget "CampHeroTests" */;
+			buildPhases = (
+				8D3AB07B194628660066212F /* Sources */,
+				8D3AB07C194628660066212F /* Frameworks */,
+				8D3AB07D194628660066212F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D3AB085194628660066212F /* PBXTargetDependency */,
+			);
+			name = CampHeroTests;
+			productName = CampHeroTests;
+			productReference = 8D3AB07F194628660066212F /* CampHeroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D3AB05C194628650066212F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CH;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "CampHero LLC";
+				TargetAttributes = {
+					8D3AB07E194628660066212F = {
+						TestTargetID = 8D3AB063194628650066212F;
+					};
+				};
+			};
+			buildConfigurationList = 8D3AB05F194628650066212F /* Build configuration list for PBXProject "CampHero" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8D3AB05B194628640066212F;
+			productRefGroup = 8D3AB065194628650066212F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D3AB063194628650066212F /* CampHero */,
+				8D3AB07E194628660066212F /* CampHeroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D3AB062194628650066212F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3AB072194628650066212F /* InfoPlist.strings in Resources */,
+				8D3AB07A194628650066212F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3AB07D194628660066212F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3AB08B194628660066212F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D3AB060194628650066212F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3AB074194628650066212F /* main.m in Sources */,
+				8D3AB078194628650066212F /* CHAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3AB07B194628660066212F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D3AB08D194628660066212F /* CampHeroTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D3AB085194628660066212F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D3AB063194628650066212F /* CampHero */;
+			targetProxy = 8D3AB084194628660066212F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D3AB070194628650066212F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D3AB071194628650066212F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8D3AB089194628660066212F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D3AB08A194628660066212F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D3AB08E194628660066212F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8D3AB08F194628660066212F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D3AB091194628660066212F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CampHero/CampHero-Prefix.pch";
+				INFOPLIST_FILE = "CampHero/CampHero-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8D3AB092194628660066212F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CampHero/CampHero-Prefix.pch";
+				INFOPLIST_FILE = "CampHero/CampHero-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8D3AB094194628660066212F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CampHero.app/CampHero";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CampHero/CampHero-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CampHeroTests/CampHeroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8D3AB095194628660066212F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CampHero.app/CampHero";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CampHero/CampHero-Prefix.pch";
+				INFOPLIST_FILE = "CampHeroTests/CampHeroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D3AB05F194628650066212F /* Build configuration list for PBXProject "CampHero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3AB08E194628660066212F /* Debug */,
+				8D3AB08F194628660066212F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D3AB090194628660066212F /* Build configuration list for PBXNativeTarget "CampHero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3AB091194628660066212F /* Debug */,
+				8D3AB092194628660066212F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8D3AB093194628660066212F /* Build configuration list for PBXNativeTarget "CampHeroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D3AB094194628660066212F /* Debug */,
+				8D3AB095194628660066212F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D3AB05C194628650066212F /* Project object */;
+}
