@@ -19,6 +19,21 @@
 		8D3AB083194628660066212F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB06B194628650066212F /* UIKit.framework */; };
 		8D3AB08B194628660066212F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB089194628660066212F /* InfoPlist.strings */; };
 		8D3AB08D194628660066212F /* CampHeroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB08C194628660066212F /* CampHeroTests.m */; };
+		8D3AB097194628A40066212F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB096194628A40066212F /* CoreLocation.framework */; };
+		8D3AB099194628B60066212F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB098194628B50066212F /* MapKit.framework */; };
+		8D3AB09C194629C00066212F /* CHUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB09B194629C00066212F /* CHUtilities.m */; };
+		8D3AB0A119462AB40066212F /* CHFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB09F19462AB40066212F /* CHFilterViewController.m */; };
+		8D3AB0A219462AB40066212F /* CHFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB0A019462AB40066212F /* CHFilterViewController.xib */; };
+		8D3AB0A619462BCA0066212F /* CHLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB0A419462BCA0066212F /* CHLocationViewController.m */; };
+		8D3AB0A719462BCA0066212F /* CHLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB0A519462BCA0066212F /* CHLocationViewController.xib */; };
+		8D3AB0AC19462EC80066212F /* CHSearchStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB0AB19462EC80066212F /* CHSearchStore.m */; };
+		8D3AB0B019462FC70066212F /* CHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB0AE19462FC70066212F /* CHMapViewController.m */; };
+		8D3AB0B119462FC70066212F /* CHMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB0AF19462FC70066212F /* CHMapViewController.xib */; };
+		8D3AB0B4194632020066212F /* CHMapMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB0B3194632020066212F /* CHMapMarker.m */; };
+		8D3AB0B91946327D0066212F /* CHResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB0B71946327D0066212F /* CHResultsViewController.m */; };
+		8D3AB0BA1946327D0066212F /* CHResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB0B81946327D0066212F /* CHResultsViewController.xib */; };
+		8D3AB0BF194633BE0066212F /* CHCampsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3AB0BD194633BE0066212F /* CHCampsiteViewController.m */; };
+		8D3AB0C0194633BE0066212F /* CHCampsiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3AB0BE194633BE0066212F /* CHCampsiteViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +63,29 @@
 		8D3AB088194628660066212F /* CampHeroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CampHeroTests-Info.plist"; sourceTree = "<group>"; };
 		8D3AB08A194628660066212F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8D3AB08C194628660066212F /* CampHeroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampHeroTests.m; sourceTree = "<group>"; };
+		8D3AB096194628A40066212F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8D3AB098194628B50066212F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8D3AB09A194629C00066212F /* CHUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUtilities.h; sourceTree = "<group>"; };
+		8D3AB09B194629C00066212F /* CHUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUtilities.m; sourceTree = "<group>"; };
+		8D3AB09E19462AB40066212F /* CHFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHFilterViewController.h; sourceTree = "<group>"; };
+		8D3AB09F19462AB40066212F /* CHFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHFilterViewController.m; sourceTree = "<group>"; };
+		8D3AB0A019462AB40066212F /* CHFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHFilterViewController.xib; sourceTree = "<group>"; };
+		8D3AB0A319462BC90066212F /* CHLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHLocationViewController.h; sourceTree = "<group>"; };
+		8D3AB0A419462BCA0066212F /* CHLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHLocationViewController.m; sourceTree = "<group>"; };
+		8D3AB0A519462BCA0066212F /* CHLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHLocationViewController.xib; sourceTree = "<group>"; };
+		8D3AB0AA19462EC80066212F /* CHSearchStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSearchStore.h; sourceTree = "<group>"; };
+		8D3AB0AB19462EC80066212F /* CHSearchStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSearchStore.m; sourceTree = "<group>"; };
+		8D3AB0AD19462FC70066212F /* CHMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMapViewController.h; sourceTree = "<group>"; };
+		8D3AB0AE19462FC70066212F /* CHMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMapViewController.m; sourceTree = "<group>"; };
+		8D3AB0AF19462FC70066212F /* CHMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHMapViewController.xib; sourceTree = "<group>"; };
+		8D3AB0B2194632020066212F /* CHMapMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMapMarker.h; sourceTree = "<group>"; };
+		8D3AB0B3194632020066212F /* CHMapMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMapMarker.m; sourceTree = "<group>"; };
+		8D3AB0B61946327D0066212F /* CHResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHResultsViewController.h; sourceTree = "<group>"; };
+		8D3AB0B71946327D0066212F /* CHResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHResultsViewController.m; sourceTree = "<group>"; };
+		8D3AB0B81946327D0066212F /* CHResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHResultsViewController.xib; sourceTree = "<group>"; };
+		8D3AB0BC194633BE0066212F /* CHCampsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCampsiteViewController.h; sourceTree = "<group>"; };
+		8D3AB0BD194633BE0066212F /* CHCampsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCampsiteViewController.m; sourceTree = "<group>"; };
+		8D3AB0BE194633BE0066212F /* CHCampsiteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHCampsiteViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3AB099194628B60066212F /* MapKit.framework in Frameworks */,
+				8D3AB097194628A40066212F /* CoreLocation.framework in Frameworks */,
 				8D3AB06A194628650066212F /* CoreGraphics.framework in Frameworks */,
 				8D3AB06C194628650066212F /* UIKit.framework in Frameworks */,
 				8D3AB068194628650066212F /* Foundation.framework in Frameworks */,
@@ -96,6 +136,8 @@
 		8D3AB066194628650066212F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D3AB098194628B50066212F /* MapKit.framework */,
+				8D3AB096194628A40066212F /* CoreLocation.framework */,
 				8D3AB067194628650066212F /* Foundation.framework */,
 				8D3AB069194628650066212F /* CoreGraphics.framework */,
 				8D3AB06B194628650066212F /* UIKit.framework */,
@@ -109,6 +151,13 @@
 			children = (
 				8D3AB076194628650066212F /* CHAppDelegate.h */,
 				8D3AB077194628650066212F /* CHAppDelegate.m */,
+				8D3AB09A194629C00066212F /* CHUtilities.h */,
+				8D3AB09B194629C00066212F /* CHUtilities.m */,
+				8D3AB09D19462A340066212F /* FilterScreen */,
+				8D3AB0A819462E760066212F /* MapScreen */,
+				8D3AB0B5194632530066212F /* ResultsScreen */,
+				8D3AB0BB194633560066212F /* DetailScreen */,
+				8D3AB0A919462E920066212F /* Data */,
 				8D3AB079194628650066212F /* Images.xcassets */,
 				8D3AB06E194628650066212F /* Supporting Files */,
 			);
@@ -142,6 +191,60 @@
 				8D3AB089194628660066212F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D3AB09D19462A340066212F /* FilterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB09E19462AB40066212F /* CHFilterViewController.h */,
+				8D3AB09F19462AB40066212F /* CHFilterViewController.m */,
+				8D3AB0A019462AB40066212F /* CHFilterViewController.xib */,
+				8D3AB0A319462BC90066212F /* CHLocationViewController.h */,
+				8D3AB0A419462BCA0066212F /* CHLocationViewController.m */,
+				8D3AB0A519462BCA0066212F /* CHLocationViewController.xib */,
+			);
+			name = FilterScreen;
+			sourceTree = "<group>";
+		};
+		8D3AB0A819462E760066212F /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB0AD19462FC70066212F /* CHMapViewController.h */,
+				8D3AB0AE19462FC70066212F /* CHMapViewController.m */,
+				8D3AB0AF19462FC70066212F /* CHMapViewController.xib */,
+				8D3AB0B2194632020066212F /* CHMapMarker.h */,
+				8D3AB0B3194632020066212F /* CHMapMarker.m */,
+			);
+			name = MapScreen;
+			sourceTree = "<group>";
+		};
+		8D3AB0A919462E920066212F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB0AA19462EC80066212F /* CHSearchStore.h */,
+				8D3AB0AB19462EC80066212F /* CHSearchStore.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		8D3AB0B5194632530066212F /* ResultsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB0B61946327D0066212F /* CHResultsViewController.h */,
+				8D3AB0B71946327D0066212F /* CHResultsViewController.m */,
+				8D3AB0B81946327D0066212F /* CHResultsViewController.xib */,
+			);
+			name = ResultsScreen;
+			sourceTree = "<group>";
+		};
+		8D3AB0BB194633560066212F /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8D3AB0BC194633BE0066212F /* CHCampsiteViewController.h */,
+				8D3AB0BD194633BE0066212F /* CHCampsiteViewController.m */,
+				8D3AB0BE194633BE0066212F /* CHCampsiteViewController.xib */,
+			);
+			name = DetailScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +323,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3AB0C0194633BE0066212F /* CHCampsiteViewController.xib in Resources */,
+				8D3AB0A719462BCA0066212F /* CHLocationViewController.xib in Resources */,
 				8D3AB072194628650066212F /* InfoPlist.strings in Resources */,
+				8D3AB0BA1946327D0066212F /* CHResultsViewController.xib in Resources */,
 				8D3AB07A194628650066212F /* Images.xcassets in Resources */,
+				8D3AB0A219462AB40066212F /* CHFilterViewController.xib in Resources */,
+				8D3AB0B119462FC70066212F /* CHMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +349,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3AB074194628650066212F /* main.m in Sources */,
+				8D3AB0B019462FC70066212F /* CHMapViewController.m in Sources */,
 				8D3AB078194628650066212F /* CHAppDelegate.m in Sources */,
+				8D3AB0B4194632020066212F /* CHMapMarker.m in Sources */,
+				8D3AB09C194629C00066212F /* CHUtilities.m in Sources */,
+				8D3AB0BF194633BE0066212F /* CHCampsiteViewController.m in Sources */,
+				8D3AB0A619462BCA0066212F /* CHLocationViewController.m in Sources */,
+				8D3AB0AC19462EC80066212F /* CHSearchStore.m in Sources */,
+				8D3AB0A119462AB40066212F /* CHFilterViewController.m in Sources */,
+				8D3AB0B91946327D0066212F /* CHResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
