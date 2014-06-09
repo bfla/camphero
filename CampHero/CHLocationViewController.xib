@@ -15,12 +15,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" prompt="Find campsites near..." placeholder="City or campground" translatesAutoresizingMaskIntoConstraints="NO" id="tAv-MI-Kjw">
+                <searchBar contentMode="redraw" prompt="Find campsites near..." placeholder="City or campground" translatesAutoresizingMaskIntoConstraints="NO" id="tAv-MI-Kjw">
                     <rect key="frame" x="0.0" y="65" width="320" height="75"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-rn-mzX">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-rn-mzX">
                     <rect key="frame" x="0.0" y="140" width="320" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.52549022440000004" blue="0.19215688110000001" alpha="1" colorSpace="deviceRGB"/>
@@ -35,7 +35,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="tAv-MI-Kjw" firstAttribute="bottom" secondItem="pBz-rn-mzX" secondAttribute="top" id="4Aw-vm-wcA"/>
+                <constraint firstItem="tAv-MI-Kjw" firstAttribute="trailing" secondItem="pBz-rn-mzX" secondAttribute="trailing" id="Btt-zZ-KLR"/>
+                <constraint firstAttribute="trailing" secondItem="tAv-MI-Kjw" secondAttribute="trailing" id="NVm-8o-MkI"/>
+                <constraint firstItem="tAv-MI-Kjw" firstAttribute="leading" secondItem="pBz-rn-mzX" secondAttribute="leading" id="n9C-xc-bnV"/>
                 <constraint firstItem="tAv-MI-Kjw" firstAttribute="top" secondItem="1" secondAttribute="top" constant="65" id="t1U-jp-PHY"/>
+                <constraint firstItem="tAv-MI-Kjw" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="usP-MT-bwd"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

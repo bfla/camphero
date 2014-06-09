@@ -9,8 +9,8 @@
 #import "CHResultsViewController.h"
 #import "CHCampsiteViewController.h"
 #import "CHSearchStore.h"
-#import "CHReserveOnlineViewController.h"
-#import "CHCampsiteMapViewController.h"
+//#import "CHReserveOnlineViewController.h"
+//#import "CHCampsiteMapViewController.h"
 
 
 @interface CHResultsViewController ()
