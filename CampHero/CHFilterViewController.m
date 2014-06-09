@@ -193,6 +193,7 @@
         //apply the filter
         int tribeId = indexPath.row;
         [[CHSearchStore sharedStore] saveActiveTribeFilter:tribeId];
+        [[CHSearchStore sharedStore] applyTribeFilter];
     }
     
 }

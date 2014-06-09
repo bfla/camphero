@@ -223,9 +223,8 @@
 -(void)saveActiveTribeFilter:(int)activeTribeId
 {
     self.privateTribeFilter = activeTribeId;
-    UIAlertView *filterAlert = [[UIAlertView alloc] initWithTitle:@"Bam!" message:@"You've applied a super filter!  Next time you run a search, I will show you only campsites that match this filter." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [filterAlert show];
-    
+    //UIAlertView *filterAlert = [[UIAlertView alloc] initWithTitle:@"Bam!" message:@"You've applied a super filter!  Next time you run a search, I will show you only campsites that match this filter." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    //[filterAlert show];
     
 }
 
@@ -260,6 +259,7 @@
             }
         }
     }
+    self.shouldResetMap = YES;
 }
 
 #pragma mark - formatPhoneNumber

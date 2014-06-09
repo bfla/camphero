@@ -74,6 +74,7 @@
 {
     // Hide the nav bar
     self.navigationController.navigationBarHidden = YES;
+    self.noticeLabel.hidden = YES;
     
     // Get current filtered campsites =============================================
     //NSArray *results = [[CHSearchStore sharedStore] campsites];
@@ -312,15 +313,19 @@
 {
     if (self.campsites.count == 0) {
         // No campsites returned.  Display "no results" notice.
-        self.noticeLabel.text = @"Bummer. No campsites here";
-        self.noticeLabel.hidden = NO;
+        //self.noticeLabel.text = @"Bummer. No campsites here";
+        //self.noticeLabel.hidden = NO;
+        UIAlertView *noCampsitesAlert = [[UIAlertView alloc] initWithTitle:@"No campsites here!" message:@"No public campgrounds can hide from CampHero!  There probably just aren't any public campgrounds here that fit your criteria. (Private campgrounds coming soon!)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [noCampsitesAlert show];
     } else if (self.campsites.count < 50) {
         // This is the normal case.  No notices.
         self.noticeLabel.hidden = YES;
     } else {
         // Maximum number of campsites was reached. Display notice.
-        self.noticeLabel.text = @"Zoom in farther to see more campsites";
-        self.noticeLabel.hidden = NO;
+        //self.noticeLabel.text = @"Zoom in farther to see more campsites";
+        //self.noticeLabel.hidden = NO;
+        UIAlertView *maxReachedAlert = [[UIAlertView alloc] initWithTitle:@"Wowza, too many campsites!" message:@"I found so many campsites that I can't show them all.  Zoom in further and search the area to find more campsites." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [maxReachedAlert show];
     }
     // Display search errors
     if ([[CHSearchStore sharedStore] noWifiError]) {
