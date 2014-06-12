@@ -36,38 +36,37 @@
 // Monitors web connection and creates proper notifications
 -(void)monitorWebConnection {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    
     [[AFNetworkReachabilityManager sharedManager]
      setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
          // Do something
-         BOOL showConnectedMessage = NO;
+         //BOOL showConnectedMessage = NO;
          switch (status) {
              case AFNetworkReachabilityStatusNotReachable:
-                 //NSLog(@"No Internet Connection");
+                 NSLog(@"Wifi disconnected...");
                  // Display proper notification
-                 [ [[UIAlertView alloc] initWithTitle:@"Holy interwebs!" message:@"CampHero's superpowers are fueled by the web.  I detect that you have no internet connection so I am powerless to help you. Sorry, friend." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-                 showConnectedMessage = YES;
+                 [ [[UIAlertView alloc] initWithTitle:@"Holy interwebs!" message:@"CampHero's superpowers are fueled by the web.  CampHero detects that you have no internet connection so it is powerless to help you." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                 //showConnectedMessage = YES;
                  break;
              case AFNetworkReachabilityStatusReachableViaWiFi:
-                 //NSLog(@"WIFI");
-                 if (showConnectedMessage == YES) {
-                     [ [[UIAlertView alloc] initWithTitle:@"Holey interwebs!" message:@"CampHero is now connected to the internet!  My superpowers are charged and at your disposal." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                 NSLog(@"WIFI reconnected...");
+                 /*if (showConnectedMessage == YES) {
+                     [ [[UIAlertView alloc] initWithTitle:@"Holy interwebs!" message:@"CampHero is now connected to the internet!  CampHero's superpowers are charged and at your disposal." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
                      showConnectedMessage = NO;
-                 }
+                 }*/
                  break;
              case AFNetworkReachabilityStatusReachableViaWWAN:
                  //NSLog(@"3G");
-                 if (showConnectedMessage == YES) {
-                     [ [[UIAlertView alloc] initWithTitle:@"Holy interwebs!" message:@"CampHero is now connected to the internet!  My superpowers are charged and at your disposal." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-                     showConnectedMessage = NO;
-                 }
+                 /*if (showConnectedMessage == YES) {
+                     [ [[UIAlertView alloc] initWithTitle:@"Holy interwebs!" message:@"CampHero is now connected to the internet!  CampHero's superpowers are charged and at your disposal." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                     //showConnectedMessage = NO;
+                 }*/
                  // Do nothing. No notification necessary.
                  break;
              default:
                  //NSLog(@"Unkown network status");
                  // Display proper notification
                  [ [[UIAlertView alloc] initWithTitle:@"Holy interwebs!" message:@"CampHero's superpowers are fueled by the web.  I detect that you might not have an internet connection and if that is true, then I am powerless to help you. Sorry, friend." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-                 showConnectedMessage = YES;
+                 //showConnectedMessage = YES;
                  break;
          }
      }];
