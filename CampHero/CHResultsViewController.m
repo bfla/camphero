@@ -95,7 +95,7 @@
 // Set section titles
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    NSString *titleString = [[NSString alloc] initWithFormat:@"Found %d campsites", self.campsites.count];
+    NSString *titleString = [[NSString alloc] initWithFormat:@"Found %lu campsites", (unsigned long)self.campsites.count];
     return NSLocalizedString(titleString, titleString);
     
 }

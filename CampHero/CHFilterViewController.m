@@ -191,7 +191,7 @@
         //cell.backgroundColor = [[UIColor alloc] initWithRed:0.1 green:0.9 blue:0.1 alpha:1.0];
         
         //apply the filter
-        int tribeId = indexPath.row;
+        int tribeId = (int)indexPath.row;
         [[CHSearchStore sharedStore] saveActiveTribeFilter:tribeId];
         [[CHSearchStore sharedStore] applyTribeFilter];
 
