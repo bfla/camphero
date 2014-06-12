@@ -17,17 +17,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gOg-9W-Mrl">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gOg-9W-Mrl">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="tintColor" red="1" green="0.52549022440000004" blue="0.19215688110000001" alpha="1" colorSpace="deviceRGB"/>
                 </mapView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD3-l3-WIi">
-                    <rect key="frame" x="0.0" y="478" width="320" height="41"/>
+                    <rect key="frame" x="0.0" y="475" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.52549022440000004" blue="0.19215688110000001" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="41" id="OdM-Jp-yqV"/>
+                        <constraint firstAttribute="height" constant="44" id="XcH-t2-qtH"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="Search this area">
@@ -38,10 +38,13 @@
                         <action selector="searchThisArea:" destination="-1" eventType="touchUpInside" id="O6X-tI-wrR"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-t4-1G5">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-t4-1G5">
                     <rect key="frame" x="0.0" y="29" width="320" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Nsh-ey-qDB"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -50,9 +53,16 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <color key="tintColor" red="1" green="0.52549022440000004" blue="0.19215688110000001" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
-                <constraint firstItem="iD3-l3-WIi" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="2AJ-7h-w8Z"/>
-                <constraint firstAttribute="bottom" secondItem="iD3-l3-WIi" secondAttribute="bottom" constant="49" id="txH-SB-FGN"/>
-                <constraint firstAttribute="trailing" secondItem="iD3-l3-WIi" secondAttribute="trailing" id="vIN-BB-EH9"/>
+                <constraint firstAttribute="bottom" secondItem="gOg-9W-Mrl" secondAttribute="bottom" constant="50" id="3uj-6R-UGP"/>
+                <constraint firstItem="Bp4-t4-1G5" firstAttribute="trailing" secondItem="gOg-9W-Mrl" secondAttribute="trailing" id="83J-44-kpg"/>
+                <constraint firstItem="gOg-9W-Mrl" firstAttribute="leading" secondItem="Bp4-t4-1G5" secondAttribute="leading" id="Geo-nz-SEF"/>
+                <constraint firstItem="gOg-9W-Mrl" firstAttribute="top" secondItem="1" secondAttribute="top" id="Rce-m7-PsY"/>
+                <constraint firstAttribute="bottom" secondItem="iD3-l3-WIi" secondAttribute="bottom" constant="49" id="SDW-mU-uUS"/>
+                <constraint firstItem="iD3-l3-WIi" firstAttribute="leading" secondItem="Bp4-t4-1G5" secondAttribute="leading" id="TIv-Of-lr9"/>
+                <constraint firstItem="Bp4-t4-1G5" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Txs-LP-HxP"/>
+                <constraint firstAttribute="trailing" secondItem="gOg-9W-Mrl" secondAttribute="trailing" id="XK9-Dp-uqC"/>
+                <constraint firstItem="Bp4-t4-1G5" firstAttribute="top" secondItem="1" secondAttribute="top" constant="29" id="dSh-Qn-Fg3"/>
+                <constraint firstItem="Bp4-t4-1G5" firstAttribute="trailing" secondItem="iD3-l3-WIi" secondAttribute="trailing" id="wH3-DT-be3"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

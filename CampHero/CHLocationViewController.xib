@@ -21,7 +21,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-rn-mzX">
-                    <rect key="frame" x="0.0" y="140" width="320" height="43"/>
+                    <rect key="frame" x="0.0" y="140" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.52549022440000004" blue="0.19215688110000001" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Near your current location">

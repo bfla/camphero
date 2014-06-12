@@ -9,6 +9,8 @@
 #import "CHCampsiteViewController.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "CHMapMarker.h"
+#import "CHDirectionsViewController.h"
+#import "CHSearchStore.h"
 //#import "CHReserveOnlineViewController.h"
 
 @interface CHCampsiteViewController ()
@@ -27,7 +29,6 @@
 @property (nonatomic, weak) IBOutlet UIButton *callCampgroundButton;
 // Map & location section
 @property (nonatomic, weak) IBOutlet UILabel *coordinateLabel;
-@property (nonatomic, weak) MKRoute *drivingRoute;
 @property (nonatomic, weak) IBOutlet UIButton *directionsButton;
 // Bookings section
 @property (nonatomic, weak) IBOutlet UILabel *reservableLabel;
@@ -42,6 +43,8 @@
 @end
 
 @implementation CHCampsiteViewController
+
+#pragma mark - VC Lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -84,8 +87,8 @@
     
     // Set nav bar
     self.navigationController.navigationBarHidden = NO;
-    UINavigationItem *navItem = self.navigationItem;
-    navItem.title = self.campsite[@"properties"][@"title"];
+    //UINavigationItem *navItem = self.navigationItem;
+    //navItem.title = self.campsite[@"properties"][@"title"];
     
     // Add content
     self.headerImage.image = [UIImage imageNamed:@"Header"];
@@ -111,24 +114,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)fetchData:(NSString *)campsiteUrl
-{
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:campsiteUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseJSON) {
-        NSLog(@"campsiteJSON: %@", responseJSON);
-        self.campsiteJSON = responseJSON;
-        [self requestSuccessful];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        self.fetchFailedError = YES;
-        NSLog(@"Error with JSON Request: %@", error);
-        UIAlertView *fetchFailedAlert = [[UIAlertView alloc] initWithTitle:@"Dastardly bugs!" message:@"Bummer.  I was unable to fetch this campsite for you. Maybe you lost your internet connection or maybe my servers were exposed to some Camptonite.  If this problem persists, please contact my trusted sidekick: brian@getcamphero.com." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [fetchFailedAlert show];
-        [self requestUnsuccessful];
-    }];
-    
+# pragma mark - View preparation & customization
+
+// Sets default/blank states for IBOutlets
+-(void)setDefaults {
+    [self.loadingIcon startAnimating];
+    self.callCampgroundButton.hidden = YES;
+    self.callToReserveButton.hidden = YES;
+    self.vibeLabel.hidden = YES;
+    self.subtitle.hidden = YES;
+    self.rankLabel.hidden = YES;
+    self.ratingLabel.hidden = YES;
+    self.campPhoneLabel.hidden = YES;
+    self.resPhoneLabel.hidden = YES;
+    self.resOnlineButton.hidden = YES;
+    self.highlightsHeader.hidden = YES;
+    self.highlightsTextView.hidden = YES;
+    //self.directionsButton.hidden = YES;
 }
 
+// This function runs if the AFNetworking request returned the campsite successfully
 -(void)requestSuccessful
 {
     [self.loadingIcon stopAnimating]; // Hide the loading icon
@@ -145,7 +150,7 @@
     
     
     // Add the ranking
-    // PROBLEM: Currently has no campsite_count
+    // This isn't ready yet
     if (![self.campsiteJSON[@"city_rank"] isKindOfClass:[NSNull class]]) {
         NSLog(@"City rank exists.  Type is... %@", NSStringFromClass([self.campsiteJSON[@"city_rank"] class]));
         NSString *rankAsString = [self.campsiteJSON[@"city_rank"] stringValue];
@@ -157,7 +162,7 @@
         self.rankLabel.hidden = NO;
     }
     
-    // Add the vibe
+    // Add the campsite vibe/style
     if (![self.campsiteJSON[@"tribes"] isKindOfClass:[NSNull class]]) { // If the campsiteJSON has a tribe attached...
         NSLog(@"Tribe exists.  Type is... %@", NSStringFromClass([self.campsiteJSON[@"tribes"][0][@"id"] class]));
         // Set the label for the vibe
@@ -184,18 +189,22 @@
     }
     
     // Add the rating if it is available
-    if (![self.campsiteJSON[@"avg_rating"] isKindOfClass:[NSNull class]]) {
+    /*if (![self.campsiteJSON[@"avg_rating"] isKindOfClass:[NSNull class]]) {
         NSLog(@"Adding rating label...");
         self.ratingLabel.text = [NSString stringWithFormat:@"Rated %@ out of 5", self.campsiteJSON[@"avg_rating"] ];
         self.ratingLabel.hidden = NO;
-    }
+    }*/
     
     // Add the manager's phone # if it is available
     if (![self.campsiteJSON[@"camp_phone"] isKindOfClass:[NSNull class]]) {
         NSLog(@"Adding camp phone number...");
-        self.campPhoneLabel.text = self.campsiteJSON[@"camp_phone"];
-        self.campPhoneLabel.hidden = NO;
-        self.callCampgroundButton.hidden = NO;
+        if ([self.campsiteJSON[@"camp_phone"] isKindOfClass:[NSString class]]) {
+            self.campPhoneLabel.text = [[CHSearchStore sharedStore]
+                                        formatPhoneNumber:[NSString stringWithFormat:@"%@", self.campsiteJSON[@"camp_phone"] ]];
+            self.campPhoneLabel.hidden = NO;
+            self.callCampgroundButton.hidden = NO;
+        }
+
     }
     
     // Add booking information
@@ -219,9 +228,12 @@
     // Reservation phone number if it is available
     if (![self.campsiteJSON[@"res_phone"] isKindOfClass:[NSNull class]]) {
         NSLog(@"Adding res_phone... Type is... %@", NSStringFromClass([self.campsiteJSON[@"res_phone"]class]));
-        self.resPhoneLabel.text = self.campsiteJSON[@"res_phone"];
-        self.resPhoneLabel.hidden = NO;
-        self.callToReserveButton.hidden = NO;
+        if ([self.campsiteJSON[@"res_phone"] isKindOfClass:[NSString class]]) {
+            self.resPhoneLabel.text = [[CHSearchStore sharedStore]
+                                        formatPhoneNumber:[NSString stringWithFormat:@"%@", self.campsiteJSON[@"res_phone"] ]];
+            self.resPhoneLabel.hidden = NO;
+            self.callToReserveButton.hidden = NO;
+        }
     }
     
     // Add highlights and tags, if there are any
@@ -278,23 +290,6 @@
     MKCoordinateRegion startRegion = MKCoordinateRegionMakeWithDistance(startCenter, startRegionWidth, startRegionHeight);
     // Set the mapView around the region
     [self.mapView setRegion:startRegion animated:YES];
-}
-
-// Sets default/blank states for IBOutlets
--(void)setDefaults {
-    [self.loadingIcon startAnimating];
-    self.callCampgroundButton.hidden = YES;
-    self.callToReserveButton.hidden = YES;
-    self.vibeLabel.hidden = YES;
-    self.subtitle.hidden = YES;
-    self.rankLabel.hidden = YES;
-    self.ratingLabel.hidden = YES;
-    self.campPhoneLabel.hidden = YES;
-    self.resPhoneLabel.hidden = YES;
-    self.resOnlineButton.hidden = YES;
-    self.highlightsHeader.hidden = YES;
-    self.highlightsTextView.hidden = YES;
-    self.directionsButton.hidden = YES;
 }
 
 // Add tags for the campground
@@ -361,25 +356,15 @@
     
 }
 
+#pragma mark - Actions
+
 -(IBAction)getDirections:(id)sender {
-    // NOT READY YET
-    MKDirectionsRequest *drivingRouteRequest = [[MKDirectionsRequest alloc] init];
-    drivingRouteRequest.transportType = MKDirectionsTransportTypeAutomobile;
-    MKMapItem *startPoint = [MKMapItem mapItemForCurrentLocation]; // Create start point as MKMapItem
-    MKMapItem *endPoint = [MKMapItem mapItemForCurrentLocation]; // Create destination point as MKMapItem
-    [drivingRouteRequest setSource:startPoint]; // sets start point to a MKMapItem
-    [drivingRouteRequest setDestination:endPoint ]; // sets end point as MKMapItem
-    MKDirections *drivingRouteDirections = [[MKDirections alloc] initWithRequest:drivingRouteRequest];
-    [drivingRouteDirections calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse * drivingRouteResponse, NSError *drivingRouteError) {
-        if (drivingRouteError) {
-            // [self handleDirectionsError:drivingRouteError];
-            // Handle the error
-        } else {
-            // The code doesn't request alternate routes, so add the single calculated route to
-            // a previously declared MKRoute property called walkingRoute.
-            self.drivingRoute = drivingRouteResponse.routes[0];
-        }
-    }];
+    // Present the CHDirectionsVC as a modal and pass it the campsite
+    CHDirectionsViewController *dvc = [[CHDirectionsViewController alloc] init];
+    dvc.campsite = self.campsite;
+    UINavigationController *dnc = [[UINavigationController alloc] initWithRootViewController:dvc];
+    [self.navigationController presentViewController:dnc animated:YES completion:nil];
+
 }
 
 // Opens a web view to visit the campsite's reservation webpage
@@ -415,6 +400,26 @@
         //NSLog(@"Calling reservation hotline at %@", reservePhoneNumber);
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reservePhoneNumber]];
     }*/
+}
+
+# pragma mark - Data handlers
+
+- (void)fetchData:(NSString *)campsiteUrl
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:campsiteUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseJSON) {
+        NSLog(@"campsiteJSON: %@", responseJSON);
+        self.campsiteJSON = responseJSON;
+        [self requestSuccessful];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        self.fetchFailedError = YES;
+        NSLog(@"Error with JSON Request: %@", error);
+        UIAlertView *fetchFailedAlert = [[UIAlertView alloc] initWithTitle:@"Dastardly bugs!" message:@"Bummer.  I was unable to fetch this campsite for you. Maybe you lost your internet connection or maybe my servers were exposed to some Camptonite.  If this problem persists, please contact my trusted sidekick: brian@getcamphero.com." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [fetchFailedAlert show];
+        [self requestUnsuccessful];
+    }];
+    
 }
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		86C6DE979EF24ED6BD77C5E0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F84330C7157416ABD706A48 /* libPods.a */; };
+		8D2B4D641947598B00CDEF41 /* CHDirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B4D621947598B00CDEF41 /* CHDirectionsViewController.m */; };
+		8D2B4D651947598B00CDEF41 /* CHDirectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2B4D631947598B00CDEF41 /* CHDirectionsViewController.xib */; };
 		8D3AB068194628650066212F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB067194628650066212F /* Foundation.framework */; };
 		8D3AB06A194628650066212F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB069194628650066212F /* CoreGraphics.framework */; };
 		8D3AB06C194628650066212F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3AB06B194628650066212F /* UIKit.framework */; };
@@ -49,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		1F84330C7157416ABD706A48 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D2B4D611947598B00CDEF41 /* CHDirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHDirectionsViewController.h; sourceTree = "<group>"; };
+		8D2B4D621947598B00CDEF41 /* CHDirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHDirectionsViewController.m; sourceTree = "<group>"; };
+		8D2B4D631947598B00CDEF41 /* CHDirectionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHDirectionsViewController.xib; sourceTree = "<group>"; };
 		8D3AB064194628650066212F /* CampHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3AB067194628650066212F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8D3AB069194628650066212F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -249,6 +254,9 @@
 				8D3AB0BC194633BE0066212F /* CHCampsiteViewController.h */,
 				8D3AB0BD194633BE0066212F /* CHCampsiteViewController.m */,
 				8D3AB0BE194633BE0066212F /* CHCampsiteViewController.xib */,
+				8D2B4D611947598B00CDEF41 /* CHDirectionsViewController.h */,
+				8D2B4D621947598B00CDEF41 /* CHDirectionsViewController.m */,
+				8D2B4D631947598B00CDEF41 /* CHDirectionsViewController.xib */,
 			);
 			name = DetailScreen;
 			sourceTree = "<group>";
@@ -339,6 +347,7 @@
 				8D3AB072194628650066212F /* InfoPlist.strings in Resources */,
 				8D3AB0BA1946327D0066212F /* CHResultsViewController.xib in Resources */,
 				8D3AB07A194628650066212F /* Images.xcassets in Resources */,
+				8D2B4D651947598B00CDEF41 /* CHDirectionsViewController.xib in Resources */,
 				8D3AB0A219462AB40066212F /* CHFilterViewController.xib in Resources */,
 				8D3AB0B119462FC70066212F /* CHMapViewController.xib in Resources */,
 			);
@@ -399,6 +408,7 @@
 				8D3AB09C194629C00066212F /* CHUtilities.m in Sources */,
 				8D3AB0BF194633BE0066212F /* CHCampsiteViewController.m in Sources */,
 				8D3AB0A619462BCA0066212F /* CHLocationViewController.m in Sources */,
+				8D2B4D641947598B00CDEF41 /* CHDirectionsViewController.m in Sources */,
 				8D3AB0AC19462EC80066212F /* CHSearchStore.m in Sources */,
 				8D3AB0A119462AB40066212F /* CHFilterViewController.m in Sources */,
 				8D3AB0B91946327D0066212F /* CHResultsViewController.m in Sources */,
@@ -522,10 +532,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CampHero/CampHero-Prefix.pch";
 				INFOPLIST_FILE = "CampHero/CampHero-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -537,10 +549,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CampHero/CampHero-Prefix.pch";
 				INFOPLIST_FILE = "CampHero/CampHero-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

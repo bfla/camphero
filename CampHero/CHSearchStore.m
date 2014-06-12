@@ -26,7 +26,7 @@
 
 @implementation CHSearchStore
 
-
+# pragma mark - Initializers, getters, & setters
 // Class method for shared data ================================================================
 // check if the single instance of BNRItemStore has been created
 + (instancetype)sharedStore
@@ -194,7 +194,6 @@
 // Search for campsites near the user ===========================================================
 - (void)searchNearUser
 {
-#pragma mark - warning what if the user says no or has location stuff disabled?
     // Create the manager object
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -202,7 +201,6 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     // Hand the query off to the delegate method startUpdatingLocation (defined below)
     [self.locationManager startUpdatingLocation];
-#pragma mark - warning I need to make sure it will stop if no location is returned
 }
 
 // When a new user location is received use it to run a campsite search
@@ -220,6 +218,7 @@
     [[CHSearchStore sharedStore] runTextSearch:input searchIsAroundUserLocation:YES ];
 }
 
+#pragma mark - Filtering functions
 -(void)saveActiveTribeFilter:(int)activeTribeId
 {
     self.privateTribeFilter = activeTribeId;
@@ -228,7 +227,6 @@
     
 }
 
-#pragma mark - applyTribeFilter
 // This function applies tribe filters =============================================================
 - (void)applyTribeFilter
 {
@@ -262,7 +260,7 @@
     self.shouldResetMap = YES;
 }
 
-#pragma mark - formatPhoneNumber
+#pragma mark - Formatters
 - (NSMutableString *)formatPhoneNumber:(NSString *)phoneNumber
 {
     NSMutableString *phoneS = [NSMutableString stringWithString:phoneNumber];

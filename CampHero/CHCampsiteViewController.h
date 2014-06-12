@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h> // !MapKit
-@class CHReserveOnlineViewController;
-@class CHCampsiteMapViewController;
 
-@interface CHCampsiteViewController : UIViewController <MKMapViewDelegate> // !MapKit Protocol
+@interface CHCampsiteViewController : UIViewController <MKMapViewDelegate>
 
 @property(nonatomic, copy) NSString *restorationIdentifier;
 

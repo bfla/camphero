@@ -21,6 +21,7 @@
 
 @implementation CHMapViewController
 
+#pragma mark - VC Lifecycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -124,8 +125,7 @@
 }
 
 
-#pragma mark - CHSearchStore
-#pragma mark - searchArea
+#pragma mark - Map Customization
 // When user taps a button, search this area!
 - (IBAction)searchThisArea:(id)sender
 {
@@ -164,9 +164,6 @@
     
 }
 
-#pragma mark - resetMarkers
-#pragma mark - searchArea
-#pragma mark - CHSearchStore
 // Resets markers on the map.  This gets called from searchArea method in CHSearchStore
 - (void)resetMarkers {
     
@@ -190,7 +187,6 @@
     [self addNotices];
 }
 
-#pragma mark - createMarkers
 // Creates markers from a mutable array of campsites
 - (void)createMarkers:(NSMutableArray *)campsites
 {
@@ -211,7 +207,6 @@
     
 }
 
-#pragma mark - reframeMapAroundAnnotations
 - (void)reframeMapView:(MKMapView *)mapView aroundCampsites:(NSMutableArray *)campsites
 {
     // Build arrays for campsite lats and lngs
@@ -245,7 +240,6 @@
     [mapView setRegion:region];
 }
 
-#pragma mark - reframeMapViewAroundUser
 - (void)reframeMapViewAroundUser:(MKMapView *)mapView
 {
     // Get the center
@@ -259,15 +253,6 @@
     [mapView setRegion:region animated:YES];
 }
 
-#pragma mark - MKMapViewDelegate
-// When the user reframes the map...
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{
-    // Show the reset button, which resets the campsites based on the current view
-    self.resetLocationButton.hidden = NO;
-}
-
-#pragma mark - MKMapViewDelegate
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)marker
 {
 	MKPinAnnotationView *markerView = nil;
@@ -293,7 +278,14 @@
 	return markerView;
 }
 
-#pragma mark - MKMapViewDelegate
+#pragma mark - Actions
+// When the user reframes the map...
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    // Show the reset button, which resets the campsites based on the current view
+    self.resetLocationButton.hidden = NO;
+}
+
 // user tapped the disclosure button in the callout
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
@@ -309,6 +301,7 @@
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
+#pragma mark - Notifications
 - (void)addNotices
 {
     if (self.campsites.count == 0) {

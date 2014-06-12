@@ -61,11 +61,11 @@
      @"title":@"Budget campsites",
      @"description":@"Find cheap places to camp.",
      };*/
-    NSDictionary *cell7 = @{@"image":@"Horse",
+    /*NSDictionary *cell7 = @{@"image":@"Horse",
                             @"title":@"Horse camping",
                             @"description":@"Camp with your lovely horse.",
-                            };
-    self.filters = @[cell1, cell2, cell3, cell4, cell7];
+                            };*/
+    self.filters = @[cell1, cell2, cell3, cell4];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -194,6 +194,7 @@
         int tribeId = indexPath.row;
         [[CHSearchStore sharedStore] saveActiveTribeFilter:tribeId];
         [[CHSearchStore sharedStore] applyTribeFilter];
+
     }
     
 }
