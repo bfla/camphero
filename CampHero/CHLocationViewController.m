@@ -44,12 +44,12 @@
     
     // Create a location manager instance to determine if location services are enabled. This manager instance will be
     // immediately destroyed afterwards.
-    CLLocationManager *manager = [[CLLocationManager alloc] init];
-    if (manager.locationServicesEnabled == NO) {
+    /*CLLocationManager *manager = [[CLLocationManager alloc] init];
+    if (manager.locationServicesEnabled == NO) {*/
+    if (![CLLocationManager locationServicesEnabled] ) {
         UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Dastardly error" message:@"You have disabled location services for this device. If you want to search for campsites near your current location, you'll first need to enable this. The decision is yours!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [servicesDisabledAlert show];
     }
-    manager = nil;
 }
 
 - (void)didReceiveMemoryWarning
